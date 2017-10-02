@@ -1,0 +1,47 @@
+set nocompatible              " required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+syntax on
+call vundle#begin()
+
+"call vundle#begin('~/some/path/here')
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+colorscheme monokai
+
+let g:SimpylFold_docstring_preview = 1
+
+" make qutocomplete window go & shortcut for goto
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\~$']  " ignore files in NERDTree
+
+" split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
+" Set the default file encoding to UTF-8:
+set encoding=utf-8
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+     {% include header.html %}
+
+    <div class="col-md-12 blog-theme-class">
+          <!-- Top Blog Header -->
+          <div class="row jumb-bot">
+            <div class="col-md-1"></div>
+            <div class="jumbotron jumb-bot-jumbu col-md-10">
+
+              <h1>{{page.title}}</h1>
+              {% if page.description %}
+                <p>{{page.description}}</p>
+              {% else %}
+                <p>{{site.description}}</p>
+              {% endif %}
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+    </div>
+    <div class="col-md-12">
+        {{ content }}
+    </div>
+
+
+  </body>
+
+</html>

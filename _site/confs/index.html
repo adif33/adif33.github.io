@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Confs</title>
+  <meta name="description" content="A quick guide for life">
+  <meta name="google-translate-customization" content="b9870a0c7376df54-aa35852016e6a5cc-ga0a0d80f6c171f17-e"></meta>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/confs/">
+  <link href="/favicon.png" rel="icon">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" title="Adif" href="http://localhost:4000/atom.xml" />
+</head>
+
+
+  <body>
+         <div class="col-md-12 navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Adif</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <ul class="nav navbar-nav">
+          
+            
+          
+            
+              <li><a href="/confs/">Confs</a></li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+
+           <li class="dropdown">
+            <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages<b class="caret"></b></a> -->
+            <ul class="dropdown-menu">
+            
+              
+            
+              
+                <li><a href="/confs/" style="text-transform : uppercase;">Confs</a></li>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+            </ul>
+          </li>
+         </ul>
+
+
+      </div>
+    </div>
+
+
+    <div class="col-md-12 blog-theme-class">
+          <!-- Top Blog Header -->
+          <div class="row jumb-bot">
+            <div class="col-md-1"></div>
+            <div class="jumbotron jumb-bot-jumbu col-md-10">
+
+              <h1>Confs</h1>
+              
+                <p>Configurations for your every day life</p>
+              
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+
+	  
+	    <h1>Confs</h1>
+	   
+	   
+	  	<article class="blog-post-small blog-post-content">
+	    	
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nt">-g</span> default-terminal <span class="s2">"screen-256color"</span>
+
+<span class="nb">set</span> <span class="nt">-g</span> prefix C-a
+unbind-key C-b
+bind-key cmd-a send-prefix
+
+setw <span class="nt">-g</span> mode-keys vi
+
+<span class="nb">set</span> <span class="nt">-g</span> history-limit 10000
+
+<span class="nb">set</span> <span class="nt">-g</span> status-interval 5
+
+set-option <span class="nt">-g</span> base-index 1
+setw <span class="nt">-g</span> pane-base-index 1
+
+<span class="nb">bind</span> | split-window <span class="nt">-h</span>
+<span class="nb">bind</span> - split-window <span class="nt">-v</span>
+<span class="nb">bind </span>S command-prompt <span class="s2">"swap-window -t '%%'"</span>
+
+set-window-option <span class="nt">-g</span> window-status-current-fg colour100
+set-window-option <span class="nt">-g</span> window-status-current-bg colour235
+set-window-option <span class="nt">-g</span> window-status-fg white
+set-window-option <span class="nt">-g</span> window-status-bg colour235
+set-option <span class="nt">-g</span> pane-border-fg colour235 <span class="c">#base02</span>
+set-option <span class="nt">-g</span> pane-active-border-fg colour100 <span class="c">#base01</span>
+
+set-option <span class="nt">-g</span> status on
+<span class="nb">set</span> <span class="nt">-g</span> status-justify centre
+set-option <span class="nt">-g</span> status-bg colour235
+set-option <span class="nt">-g</span> status-fg colour150
+<span class="c"># set-window-option -g window-status-bg colour236 </span>
+
+<span class="c"># 135 blue</span>
+<span class="c"># 235 blue gray</span>
+<span class="c"># 100 yello</span>
+<span class="c"># 150 green</span>
+<span class="c"># 250 white</span>
+<span class="c"># 225 purple</span>
+<span class="c"># 166 red</span>
+
+    </code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set </span>nocompatible              <span class="s2">" required
+filetype off                  "</span> required
+
+<span class="nb">set </span>rtp+<span class="o">=</span>~/.vim/bundle/Vundle.vim
+syntax on
+call vundle#begin<span class="o">()</span>
+
+<span class="s2">"call vundle#begin('~/some/path/here')
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+call vundle#end()            "</span> required
+filetype plugin indent on    <span class="s2">" required
+
+colorscheme monokai
+
+let g:SimpylFold_docstring_preview = 1
+
+"</span> make qutocomplete window go &amp; shortcut <span class="k">for </span>goto
+<span class="nb">let </span>g:ycm_autoclose_preview_window_after_completion<span class="o">=</span>1
+map &lt;leader&gt;g  :YcmCompleter GoToDefinitionElseDeclaration&lt;CR&gt;
+
+map &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt;
+<span class="nb">let </span><span class="nv">NERDTreeIgnore</span><span class="o">=[</span><span class="s1">'\.pyc$'</span>, <span class="s1">'\~$'</span><span class="o">]</span>  <span class="s2">" ignore files in NERDTree
+
+"</span> split navigations
+nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
+nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
+nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
+nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
+
+<span class="s2">" Enable folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap &lt;space&gt; za
+
+"</span> Set the default file encoding to UTF-8:
+<span class="nb">set </span><span class="nv">encoding</span><span class="o">=</span>utf-8
+
+
+
+    </code></pre></figure>
+
+
+	  	</article>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+    </div>
+
+
+  </body>
+
+</html>
